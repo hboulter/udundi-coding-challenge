@@ -40,7 +40,11 @@ h1 {
   margin-right: 1.2rem;
   min-width: 4rem;
   min-height: 4rem;
-  color: #611818; }
+  color: #611818;
+  transition: all 0.5s ease-in-out; }
+  .popup-btn:hover {
+    transform: scale(1.2);
+    backface-visibility: hidden; }
   .popup-btn:focus {
     outline: 0; }
 
@@ -68,7 +72,6 @@ h1 {
 .popup {
   position: fixed;
   opacity: 0;
-  transition: opacity 0.5s;
   z-index: -1;
   transition: all 1s; }
   .popup__content {
@@ -116,6 +119,8 @@ h1 {
     .popup button:hover {
       transform: scale(1.1);
       backface-visibility: hidden; }
+    .popup button:active {
+      transform: scale(1); }
   .popup__close {
     color: #000;
     position: absolute;

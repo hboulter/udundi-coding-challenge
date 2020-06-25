@@ -25,6 +25,12 @@
   min-width: 4rem;
   min-height: 4rem;
   color: $color-primary;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+    backface-visibility: hidden;
+  }
 
   &:focus {
     outline: 0;

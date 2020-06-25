@@ -1,7 +1,6 @@
 .popup {
   position: fixed;
   opacity: 0;
-  transition: opacity 0.5s;
   z-index: -1;
   transition: all 1s;
 
@@ -67,6 +66,10 @@
     &:hover {
       transform: scale(1.1);
       backface-visibility: hidden;
+    }
+
+    &:active {
+      transform: scale(1);
     }
   }
 
