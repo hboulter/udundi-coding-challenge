@@ -1,0 +1,181 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-image: linear-gradient(to right, #611818 25%, transparent 25%, transparent 50%), url(../img/johannes-plenio-RwHv7LgeC7s-unsplash.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 1.6rem; }
+
+h1 {
+  font-family: "Noto Serif", serif;
+  letter-spacing: 0.4rem; }
+
+.btn, .btn:link, .btn:visited {
+  margin: auto 1.6rem;
+  color: #611818;
+  background-color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 50%;
+  transition: all 0.2s;
+  position: relative;
+  border: none;
+  cursor: pointer; }
+
+.popup-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 50%;
+  margin-right: 1.2rem;
+  min-width: 4rem;
+  min-height: 4rem;
+  color: #611818; }
+  .popup-btn:focus {
+    outline: 0; }
+
+.shape {
+  background: #fff;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem; }
+
+#social-link, #social-link:link, #social-link:visited {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0.8rem;
+  color: #611818;
+  text-decoration: none;
+  font-size: 3.2rem;
+  text-align: center;
+  vertical-align: bottom;
+  transition: all 0.5s ease-in-out; }
+  #social-link:hover, #social-link:link:hover, #social-link:visited:hover {
+    transform: scale(1.1);
+    backface-visibility: hidden; }
+
+.popup {
+  position: fixed;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: -1;
+  transition: all 1s; }
+  .popup__content {
+    position: relative;
+    padding: 6rem 4.8rem;
+    max-width: 48rem;
+    min-height: 61.5rem;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+    transform: translate(30%, 18%); }
+    .popup__content h1 {
+      font-size: 5.8rem;
+      color: #611818;
+      margin-bottom: 5.2rem;
+      position: relative;
+      display: inline-block; }
+      .popup__content h1::after {
+        background-image: linear-gradient(to right, #611818 10%, rgba(97, 24, 24, 0.1));
+        bottom: -2.6rem;
+        content: "";
+        height: 0.2rem;
+        left: 0;
+        position: absolute;
+        right: 0; }
+    .popup__content p {
+      font-size: 1.4rem;
+      line-height: 2;
+      font-weight: 300;
+      margin-bottom: 3.2rem; }
+  .popup button {
+    background-image: linear-gradient(to right, #611818, rgba(97, 24, 24, 0.6));
+    color: #fff;
+    min-width: 20rem;
+    min-height: 4.8rem;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    border-radius: 2px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out; }
+    .popup button:hover {
+      transform: scale(1.1);
+      backface-visibility: hidden; }
+  .popup__close {
+    color: #000;
+    position: absolute;
+    top: 1.6rem;
+    right: 2rem;
+    font-size: 3.2rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    line-height: 1;
+    cursor: pointer; }
+    .popup__close:hover {
+      color: #611818; }
+
+.popup-active {
+  opacity: 1;
+  z-index: 100000; }
+
+.heading {
+  position: absolute;
+  top: 50%;
+  left: 10%; }
+  .heading__primary {
+    color: #fff;
+    font-size: 16rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    transition: all 0.5s ease-in-out; }
+  .heading__secondary {
+    color: #fff;
+    font-size: 2.4rem;
+    display: inline-block;
+    animation-name: moveInLeft;
+    animation-duration: 1s; }
+
+.heading-inactive {
+  opacity: 0; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.section-social {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 3.2rem; }

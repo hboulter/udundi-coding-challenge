@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  background-image: linear-gradient(
+      to right,
+      $color-primary 25%,
+      transparent 25%,
+      transparent 50%
+    ),
+    url(../img/johannes-plenio-RwHv7LgeC7s-unsplash.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-family: "Noto Serif", serif;
+  letter-spacing: 0.4rem;
+}
